@@ -1,0 +1,42 @@
+
+<header>
+	<h1> That bitch Carol Baskin </h1>
+</header>
+
+<body style="background-color: Silver">
+
+	<h3 style="color: Maroon">Fra log.csv</h3>
+		<table style="border: 3px solid SlateGray; border-style: outset; border-radius: 2px; background-color: DimGrey; color: DarkKhaki; opacity: 0.8; font: 100% Courier New, monospace; width: 60%">
+			<tr style="border: 2px solid Silver">
+				<th style="border: 2px solid Silver; text-align: left">Temperature/C</th>
+				<th style="border: 2px solid Silver; text-align: left">Humidity/%</th>
+				<th style="border: 2px solid Silver; text-align: left">Pressure/hPa</th>
+			</tr>
+			{% for vals in vars %}
+				<tr style="border: 2px solid black">
+					<td style="border: 2px solid black">{{vals[0]}}</td> 
+					<td style="border: 2px solid black">{{vals[1]}}</td>
+					<td style="border: 2px solid black">{{vals[2]}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	<br>
+	<form>
+		<input type="submit" value="Refresh" style="border: 3px solid SlateGray; border-style: outset; height: 40px; width: 100px; font: 20px Lucida Console, monospace; color: LightGreen; background-color: DarkSlateGrey; opacity: 0.8">
+	</form>
+	<h3 style="color: Maroon">Fra Sense Hat</h3>
+	<table style="border: 3px solid SlateGray; border-style: outset; border-radius: 2px; background-color: DimGrey; color: DarkKhaki; opacity: 0.8; font: 100% Courier New, monospace; width: 60%">
+			<tr style="border: 2px solid Silver">
+				<th style="border: 2px solid Silver; text-align: left">Temperature/C</th>
+				<th style="border: 2px solid Silver; text-align: left">Humidity/%</th>
+				<th style="border: 2px solid Silver; text-align: left">Pressure/hPa</th>
+			</tr>
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black">{{fresh[0]}}</td> 
+				<td style="border: 2px solid black">{{fresh[1]}}</td>
+				<td style="border: 2px solid black">{{fresh[2]}}</td>
+			</tr>
+		</table>
+</body>
+
+
